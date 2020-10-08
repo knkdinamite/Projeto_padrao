@@ -73,8 +73,8 @@
 
     <VideoView
         android:id="@+id/videoView"
-        android:layout_width="190dp"
-        android:layout_height="227dp"
+        android:layout_width="204dp"
+        android:layout_height="232dp"
         android:layout_marginTop="192dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
