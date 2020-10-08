@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Projeto_padrao</string>
+    <string name="login">Login</string>
+    <string name="my_title">My Title</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+
+
+</resources>
