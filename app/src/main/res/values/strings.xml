@@ -4,7 +4,12 @@
     <string name="my_title">My Title</string>
     <string name="password">Password</string>
     <string name="email">Email</string>
+    <string name="registre">Resgistre-se</string>
+    <string name="registrar">Registrar</string>
+    <string name="cancel">Cancelar</string>
     <string name="name">Name</string>
+    <string name="us3r">Usuario</string>
+    <string name="terms">Terms & Conditions</string>
 
 
 </resources>

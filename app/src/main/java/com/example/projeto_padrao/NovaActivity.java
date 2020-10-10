@@ -11,7 +11,7 @@ public class NovaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.minha_tela);
+        setContentView(R.layout.login);
     Log.d("Ciclo_vivido", "onCreate - a novaActivity iniciou");
 
     }
