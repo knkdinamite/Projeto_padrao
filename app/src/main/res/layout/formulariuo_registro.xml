@@ -61,10 +61,14 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/textname"
+        android:id="@+id/register_name"
         android:layout_width="0dp"
         android:layout_height="40dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
         android:layout_marginTop="4dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginRight="64dp"
         android:background="@drawable/round_border"
         android:ems="10"
         android:hint="@string/name"
@@ -75,10 +79,14 @@
         app:layout_constraintTop_toBottomOf="@+id/view7" />
 
     <EditText
-        android:id="@+id/textemail"
+        android:id="@+id/register_email"
         android:layout_width="0dp"
         android:layout_height="40dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
         android:layout_marginTop="2dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginRight="64dp"
         android:background="@drawable/round_border"
         android:ems="10"
         android:hint="@string/email"
@@ -87,13 +95,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textsobre" />
+        app:layout_constraintTop_toBottomOf="@+id/register_sobre" />
 
     <EditText
-        android:id="@+id/textpass"
+        android:id="@+id/register_pass"
         android:layout_width="0dp"
         android:layout_height="40dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
         android:layout_marginTop="2dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginRight="64dp"
         android:background="@drawable/round_border"
         android:ems="10"
         android:hint="@string/password"
@@ -101,7 +113,7 @@
         android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textemail" />
+        app:layout_constraintTop_toBottomOf="@+id/register_email" />
 
     <TextView
         android:id="@+id/textView3"
@@ -120,10 +132,14 @@
         app:layout_constraintVertical_bias="0.8" />
 
     <EditText
-        android:id="@+id/textsobre"
+        android:id="@+id/register_sobre"
         android:layout_width="0dp"
         android:layout_height="40dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
         android:layout_marginTop="2dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginRight="64dp"
         android:background="@drawable/round_border"
         android:ems="10"
         android:hint="Sobrenome"
@@ -131,7 +147,7 @@
         android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textname" />
+        app:layout_constraintTop_toBottomOf="@+id/register_name" />
 
     <Button
         android:id="@+id/btregistrar"
@@ -147,20 +163,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+        app:layout_constraintTop_toBottomOf="@+id/box_terms" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/box_terms"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginLeft="60dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginRight="60dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginRight="64dp"
         android:text="@string/terms"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textpass" />
+        app:layout_constraintTop_toBottomOf="@+id/register_pass" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

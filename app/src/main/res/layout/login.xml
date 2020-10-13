@@ -64,7 +64,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/textuser"
+        android:id="@+id/user_login"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
@@ -83,7 +83,7 @@
         app:layout_constraintTop_toBottomOf="@+id/view2" />
 
     <EditText
-        android:id="@+id/text_senha_login"
+        android:id="@+id/senha_login"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
@@ -98,7 +98,7 @@
         android:paddingLeft="35dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textuser" />
+        app:layout_constraintTop_toBottomOf="@+id/user_login" />
 
     <Button
         android:id="@+id/btlogin"
@@ -117,7 +117,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_senha_login" />
+        app:layout_constraintTop_toBottomOf="@+id/senha_login" />
 
     <ImageView
         android:id="@+id/imageView"

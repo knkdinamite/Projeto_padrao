@@ -3,20 +3,38 @@ package com.example.projeto_padrao;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.service.autofill.OnClickAction;
 import android.util.Log;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
 
-public class NovaActivity extends AppCompatActivity {
+import org.w3c.dom.Text;
+
+public class RegisterActivity extends AppCompatActivity {
+    EditText register_name;
+    EditText register_sobre;
+    EditText register_email;
+    EditText register_pass;
+    CheckBox box_terms;
+    Button btregistrar;
+    Button btcancel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.login);
-    Log.d("Ciclo_vivido", "onCreate - a novaActivity iniciou");
+         super.onCreate(savedInstanceState);
+        setContentView(R.layout.formulariuo_registro);
+    register_name = (EditText) findViewById(R.id.register_name);
+    register_sobre = (EditText) findViewById(R.id.register_sobre);
+    register_email = (EditText) findViewById(R.id.register_email);
+    register_pass = (EditText) findViewById(R.id.register_pass);
+    box_terms = (CheckBox) findViewById(R.id.box_terms);
+    btregistrar = (Button) findViewById(R.id.btregistrar);
+    btcancel = (Button) findViewById(R.id.btcancel);
 
     }
     @Override
     protected void onStart(){
+
         Log.d( "Ciclo_vivido", "onStart-Comecando");
         super.onStart();
     }
@@ -40,5 +58,4 @@ public class NovaActivity extends AppCompatActivity {
         Log.d( "Ciclo_vivido", "onDestroy - activity completamente destruida");
         super.onDestroy();
     }
-
 }
