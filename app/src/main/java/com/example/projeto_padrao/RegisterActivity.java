@@ -2,11 +2,14 @@ package com.example.projeto_padrao;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -31,7 +34,18 @@ public class RegisterActivity extends AppCompatActivity {
     btregistrar = (Button) findViewById(R.id.btregistrar);
     btcancel = (Button) findViewById(R.id.btcancel);
 
+
+        btregistrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                Toast.makeText(RegisterActivity.this,"Registrado com Sucesso",Toast.LENGTH_SHORT).show();
+                startActivity(intent);
+            }
+        });
+
     }
+
     @Override
     protected void onStart(){
 

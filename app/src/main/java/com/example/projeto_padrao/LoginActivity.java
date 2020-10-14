@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -33,6 +34,23 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(LoginActivity.this,RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btlogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String usuario = user_login.getText().toString();
+                String senha = senha_login.getText().toString();
+
+                Log.d("autenticação","\nUsuario:"+ usuario + "\nSenha:"+ senha);
+
+                Usuario usuarioLogado = new Usuario(usuario,senha);
+                usuarioLogado.logar(LoginActivity.this);
+
+                Intent intent = new Intent(LoginActivity.this,PerfilActivity.class);
+                Toast.makeText(LoginActivity.this,"Logado com Sucesso",Toast.LENGTH_SHORT).show();
                 startActivity(intent);
             }
         });
