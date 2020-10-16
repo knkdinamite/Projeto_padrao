@@ -4,12 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.service.autofill.OnClickAction;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.projeto_padrao.models.Gato;
+import com.example.projeto_padrao.models.Usuario;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -18,18 +20,33 @@ public class LoginActivity extends AppCompatActivity {
     Button btlogin;
     Button btregister;
 
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.login);
-        Log.d("Ciclo_vivido", "onCreate - a novaActivity iniciou");
-
+    private void declarandoComponentes(){
         user_login = (EditText) findViewById(R.id.user_login);
         senha_login = (EditText) findViewById(R.id.senha_login);
         btlogin = (Button) findViewById(R.id.btlogin);
         btregister = (Button) findViewById(R.id.btregister);
+    }
 
+    private void iniciandoLogin(){
+        btlogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String usuario = user_login.getText().toString();
+                String senha = senha_login.getText().toString();
+
+                Usuario usuarioLogado = new Usuario(usuario,senha);
+                usuarioLogado.logar(LoginActivity.this);
+
+                Log.d("autenticação","\nUsuario:"+ usuario + "\nSenha:"+ senha);
+
+                Intent intent = new Intent(LoginActivity.this,PerfilActivity.class);
+                Toast.makeText(LoginActivity.this,"Logado com Sucesso",Toast.LENGTH_SHORT).show();
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void iniciarRegistro(){
         btregister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -37,23 +54,25 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
 
-        btlogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String usuario = user_login.getText().toString();
-                String senha = senha_login.getText().toString();
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.login);
+        Log.d("Ciclo_vivido", "onCreate - a novaActivity iniciou");
 
-                Log.d("autenticação","\nUsuario:"+ usuario + "\nSenha:"+ senha);
 
-                Usuario usuarioLogado = new Usuario(usuario,senha);
-                usuarioLogado.logar(LoginActivity.this);
+        //Gato gato = new Gato();
+        //gato.miar();
 
-                Intent intent = new Intent(LoginActivity.this,PerfilActivity.class);
-                Toast.makeText(LoginActivity.this,"Logado com Sucesso",Toast.LENGTH_SHORT).show();
-                startActivity(intent);
-            }
-        });
+        declarandoComponentes();
+        iniciandoLogin();
+        iniciarRegistro();
+
+
+
+
 
     }
     @Override

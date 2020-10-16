@@ -15,7 +15,7 @@ import org.w3c.dom.Text;
 
 public class RegisterActivity extends AppCompatActivity {
     EditText register_name;
-    EditText register_sobre;
+
     EditText register_email;
     EditText register_pass;
     CheckBox box_terms;
@@ -27,7 +27,7 @@ public class RegisterActivity extends AppCompatActivity {
          super.onCreate(savedInstanceState);
         setContentView(R.layout.formulariuo_registro);
     register_name = (EditText) findViewById(R.id.register_name);
-    register_sobre = (EditText) findViewById(R.id.register_sobre);
+
     register_email = (EditText) findViewById(R.id.register_email);
     register_pass = (EditText) findViewById(R.id.register_pass);
     box_terms = (CheckBox) findViewById(R.id.box_terms);
