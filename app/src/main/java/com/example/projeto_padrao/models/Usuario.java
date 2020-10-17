@@ -3,8 +3,12 @@ package com.example.projeto_padrao.models;
 import android.content.Context;
 import android.widget.Toast;
 
+import com.orm.SugarRecord;
 
-public class Usuario{
+import java.util.List;
+
+
+public class Usuario extends SugarRecord {
     private String username;
     private String password;
 
@@ -29,8 +33,7 @@ public class Usuario{
         this.email = email;
     }
 
-
-
+    public Usuario(){}
 
 
     public Usuario(String usuario, String senha){
@@ -64,9 +67,16 @@ public class Usuario{
 
     }
 
-    public void registrar(){
-
+    public void registrar(Context context) {
+        List<Usuario> usuarios = Usuario.find(Usuario.class, "username = ? and password = ?", this.username, this.password);
+        if(usuarios.size()==0){
+            this.save();
+        }else {
+            Toast.makeText(context,"Este usuário já existe",Toast.LENGTH_SHORT).show();
+        }
     }
+
+
 }
 
 
