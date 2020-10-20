@@ -3,6 +3,8 @@ package com.example.projeto_padrao.models;
 import android.content.Context;
 import android.widget.Toast;
 
+
+
 import com.orm.SugarRecord;
 
 import java.util.List;
@@ -36,11 +38,11 @@ public class Usuario extends SugarRecord {
     public Usuario(){}
 
 
-    public Usuario(String usuario, String senha){
-        this.username = usuario;
-        this.password = senha;
+    //public Usuario(String usuario, String senha){
+       // this.username = usuario;
+       // this.password = senha;
 
-    };
+   // };
     public String getUsername(){return username;}
 
     public void setUsername(String username){this.username = username;}

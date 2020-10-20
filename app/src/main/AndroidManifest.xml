@@ -13,9 +13,9 @@
         android:name="com.orm.SugarApp">
 
         <meta-data android:name="DATABASE" android:value="projeto_padrao_database.db" />
-        <meta-data android:name="VERSION" android:value="2" />
+        <meta-data android:name="VERSION" android:value="6" />
         <meta-data android:name="QUERY_LOG" android:value="true" />
-        <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="com.projato_padrao.models" />
+        <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="com.example.projeto_padrao.models" />
 
 
 

@@ -39,7 +39,9 @@ public class RegisterActivity extends AppCompatActivity {
                 String usuario = register_user.getText().toString();
                 String senha = register_pass.getText().toString();
 
-                Usuario usuarioLogado = new Usuario(usuario,senha);
+                Usuario usuarioLogado = new Usuario();
+                usuarioLogado.setUsername(usuario);
+                usuarioLogado.setPassword(senha);
                 usuarioLogado.registrar(RegisterActivity.this);
             }
         });

@@ -13,6 +13,8 @@ import android.widget.Toast;
 import com.example.projeto_padrao.models.Gato;
 import com.example.projeto_padrao.models.Usuario;
 
+import java.util.List;
+
 public class LoginActivity extends AppCompatActivity {
 
     EditText user_login ;
@@ -34,7 +36,9 @@ public class LoginActivity extends AppCompatActivity {
                 String usuario = user_login.getText().toString();
                 String senha = senha_login.getText().toString();
 
-                Usuario usuarioLogado = new Usuario(usuario,senha);
+                Usuario usuarioLogado = new Usuario();
+                usuarioLogado.setUsername(usuario);
+                usuarioLogado.setPassword(senha);
                 usuarioLogado.logar(LoginActivity.this);
 
                 Log.d("autenticação","\nUsuario:"+ usuario + "\nSenha:"+ senha);
@@ -62,6 +66,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.login);
         Log.d("Ciclo_vivido", "onCreate - a novaActivity iniciou");
 
+        List<Usuario> usuarios = Usuario.listAll(Usuario.class);
 
         //Gato gato = new Gato();
         //gato.miar();
