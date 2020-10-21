@@ -3,15 +3,15 @@ package com.example.projeto_padrao.models;
 import java.util.Date;
 
 public class Agendamento {
-    private Date data;
+    private String data;
     private Date horainicio;
     private Date horafinal;
 
-    public Date getData() {
+    public String getData() {
         return data;
     }
 
-    public void setData(Date data) {
+    public void setData(String data) {
         this.data = data;
     }
 
